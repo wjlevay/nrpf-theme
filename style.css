@@ -1,0 +1,179 @@
+/*
+Theme Name: Twenty Twelve Child theme
+Description: A custom child theme for the National Recording Preservation Foundation.
+Version: 1.0
+Author: W.J. Levay
+Author URI: http://wjlevay.net
+Template: twentytwelve
+*/
+@import url('../twentytwelve/style.css');
+
+/* =Notes
+--------------------------------------------------------------
+This stylesheet uses rem values with a pixel fallback. The rem
+values (and line heights) are calculated using two variables:
+
+$rembase:     14;
+$line-height: 24;
+
+---------- Examples
+
+* Use a pixel value with a rem fallback for font-size, padding, margins, etc.
+	padding: 5px 0;
+	padding: 0.357142857rem 0; (5 / $rembase)
+
+* Set a font-size and then set a line-height based on the font-size
+	font-size: 16px
+	font-size: 1.142857143rem; (16 / $rembase)
+	line-height: 1.5; ($line-height / 16)
+
+---------- Vertical spacing
+
+Vertical spacing between most elements should use 24px or 48px
+to maintain vertical rhythm:
+
+.my-new-div {
+	margin: 24px 0;
+	margin: 1.714285714rem 0; ( 24 / $rembase )
+}
+*/
+
+/* Masthead stuff */
+
+/* Remove shadow from header image and align left */
+	img.header-image {
+		margin: 1.714285714rem auto;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
+/* Site title and description */
+	.site-header h1 {
+		font-size: 32px;
+		font-size: 2.28571428571429rem;
+		font-weight: normal;
+		line-height: 36px;
+		line-height: 2.57142857142857rem;
+	}
+	.site-header h2 {
+		margin: 1.714285714rem auto;
+		font-size: 20px;
+		font-size: 1.42857142857143rem;
+		font-style: italic;
+	}
+
+/* Menu toggle button */
+	.menu-toggle {
+		font-size: 1.5em;
+		line-height: 1em;
+	}
+
+/* Hide homepage title, but not page or post titles */
+	.home .page .entry-header {display: none;}
+
+/* Increase font size on homepage */
+	.home .page .entry-content {
+		font-size: 16px;
+		font-size: 1.142857143rem;
+	}
+
+/* WooSlider edits */
+	.wooslider {
+		border: 0;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		-o-box-shadow: none;
+		box-shadow: none;
+	}
+
+/* Homepage widget content */
+	.front-widgets .social-links p, .email-label {
+		font-size: 18px;
+		font-size: 1.285714285rem;
+	}
+	.front-widgets .social-links a {text-decoration: none;}
+	.widget a {text-decoration: none;}
+	#enhancedtextwidget-2 a {color: #757575;}
+	#enhancedtextwidget-2 a:hover {color: #21759b;}
+
+/* General widget content */
+	.widget-title {
+		font-size: 14px;
+		font-size: 1rem;
+		color: #000000;
+	}
+	.widget-area .textwidget li {
+		margin-left: 0;
+	}
+	.widget-area ul {
+		list-style: disc outside;
+	}
+
+/* Page content */
+	.entry-content h1 {}
+	.entry-content hr {}
+	.entry-content a:visited {}
+	.site-content article {
+		border-bottom: 0;
+		margin-bottom: 0;
+	}
+	.entry-content li {
+		margin: 0 0 14px 36px;
+		margin: 0 0 1rem 2.571428571rem;
+	}
+	.link-note {
+		font-size: 12px;
+		font-size: 0.857142857rem;
+	}
+	.link-image {}
+	#comments {display: none;}
+
+/* Email signup */
+	.email-label {
+		font-weight: normal;
+		color: #757575;
+	}
+	.email-thankyou {}
+	.email-error {}
+	#contactsubmit {}
+	.phplist_widget input {
+		margin: 1rem 0 0 3.6rem;
+		margin: 14px 0 0 50.4px;
+	}
+
+/* Form button */
+	input[type="submit"] {font-size: 1rem;}
+
+/* Minimum width of 300 pixels. */
+
+@media screen and (min-width: 300px) {
+	img.header-image {display: block;}
+	hgroup {display: none;}
+	#enhancedtextwidget-2 {margin-bottom: 0;}
+	.wooslider-direction-nav {display: none;}
+}
+
+/* Minimum width of 600 pixels. */
+
+@media screen and (min-width: 600px) {
+	hgroup {
+		display: inline-block;
+		margin-top: 48px;
+		margin-top: 3.42857142857143rem;
+	}
+	img.header-image {display: inline;}
+	.logo {
+		width: 25%;
+		float: right;
+	}
+	.title-and-menu {
+		width: 72%;
+		margin-right: 1rem;
+	}
+	#site-navigation {
+		margin-top: 48px;
+		margin-top: 3.42857142857143rem;
+	}
+	#enhancedtextwidget-2 {margin-bottom: 0;}
+	.wooslider-direction-nav {display: block;}
+}
